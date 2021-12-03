@@ -3,9 +3,7 @@ using System.Text.RegularExpressions;
 
 namespace Ceaser_cipher
 {
-    /// <summary>
-    /// Bank account demo class.
-    /// </summary>
+  
     public class Ceaser
     {
         static char[] alphabete_letter = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r','s'
@@ -22,7 +20,7 @@ namespace Ceaser_cipher
         /// <summary>
         /// Ceaser constructor 
         /// </summary>
-        /// <param name="Text">textplain</param>
+        /// <param name="Text">plain text</param>
         /// <param name="Value">shift number</param>
         public Ceaser(String Text, int Value)
         {
@@ -30,10 +28,10 @@ namespace Ceaser_cipher
             this.value = Value;
         }
         /// <summary>
-        /// encrypt method to convert the textplain 
+        /// encrypt method to convert the plain text
         /// </summary>
-        /// <param name="input"> the textplain</param>
-        /// <param name="sheft"> sheft number</param>
+        /// <param name="input"> the plain text</param>
+        /// <param name="sheft"> shift number</param>
         /// <returns></returns>
         public string encrypt(String input, int shift)
         {
@@ -41,7 +39,7 @@ namespace Ceaser_cipher
             char[] message = input.ToLower().ToCharArray();
             ///use regex to ignore the expression letter like !;,
             Regex.IsMatch(input, "^[a-zA-Z]+$");
-            //create the array of charachter to hold the message lenght
+            //create the array of charachter to hold the message length
             char[] encryptedMessage = new char[message.Length];
             for (int i = 0; i < message.Length; i++)
             {
